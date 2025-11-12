@@ -11,10 +11,9 @@
 
 
 ## Question 2
-
-    * 2 images : l’image "base" et l’image "target" construite à partir de la base.
-    * Non. Si l’image base n’a pas changé, on n’a pas besoin de la reconstruire — on peut réutiliser l’image base déjà poussée dans l’Artifact Registry. Reconstruire systématiquement la base gaspille du temps car les couches identiques pourraient être réutilisées.
-    * Utiliser le cache de couches : pré‑télécharger (docker pull) l’image base avant de construire l’image target pour que Docker puisse réutiliser les couches locales ; n’exécuter la construction/push de la base que si ses dépendances ont changé.
+* 2 images : l’image "base" et l’image "target" construite à partir de la base.
+* Non. Si l’image base n’a pas changé, on n’a pas besoin de la reconstruire — on peut réutiliser l’image base déjà poussée dans l’Artifact Registry. Reconstruire systématiquement la base gaspille du temps car les couches identiques pourraient être réutilisées.
+* Utiliser le cache de couches : pré‑télécharger (docker pull) l’image base avant de construire l’image target pour que Docker puisse réutiliser les couches locales ; n’exécuter la construction/push de la base que si ses dépendances ont changé.
     
 ## Question 4
 
